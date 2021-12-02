@@ -148,7 +148,7 @@ class PrometheusEcsDiscoverer:
             container_instance = None
             ec2_instance = None
             if task.get("launchType") != "FARGATE":
-                if "containerInstanceArn" in container_instances[task]:
+                if "containerInstanceArn" in task:
                     container_instance = container_instances[task["containerInstanceArn"]]
                     ec2_instance = ec2_instances[container_instance["ec2InstanceId"]]
 
