@@ -4,7 +4,7 @@
 
 # The exact interval in seconds for the discoverer. The actual interval will
 # always be greater or equal (if the process takes longer than the interval).
-INTERVAL = 15
+INTERVAL = 60
 
 # This dir fill contain all target files for Prometheus.
 OUTPUT_DIRECTORY = "/tmp"
@@ -20,7 +20,8 @@ MARKER = "PROMETHEUS_TARGET"
 
 # ==============================================================================
 # Logging
-LOG_LEVEL = "ERROR"
+LOG_LEVEL = "WARNING"
+LOGURU_LEVEL = "WARNING"
 LOG_JSON = false
 PRINT_STRUCTS = false
 BOTO3_DEBUG = false
