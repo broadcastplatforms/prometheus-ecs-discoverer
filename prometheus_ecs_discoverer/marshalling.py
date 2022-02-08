@@ -185,5 +185,6 @@ def write_targets_to_file(targets: List[Type[Target]], output_directory: str) ->
         tmp_file_path = f"{file_path}.tmp"
         with open(tmp_file_path, "w") as file:
             file.write(json.dumps(content, indent=4))
+            file.close()
         os.rename(tmp_file_path, file_path)
         logger.bind(file=file_path).debug("Written file.") if s.DEBUG else None
