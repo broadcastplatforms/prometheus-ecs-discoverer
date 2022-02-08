@@ -20,7 +20,7 @@ MARKER = "PROMETHEUS_TARGET"
 
 # ==============================================================================
 # Logging
-LOG_LEVEL = "INFO"
+LOG_LEVEL = "ERROR"
 LOG_JSON = false
 PRINT_STRUCTS = false
 BOTO3_DEBUG = false
